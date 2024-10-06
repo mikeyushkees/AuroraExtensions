@@ -9,6 +9,6 @@
 		</update>
 	</info>
 	<files>
-		<file name="Tiefling_OneDnd.xml" url="https://raw.githubusercontent.com/mikeyushkees/AuroraExtensions/master/mikeyushkees/file1.xml" />
+		<file name="OneDnd_Core.index" url="https://raw.githubusercontent.com/mikeyushkess/AuroraExtensions/master/mikeyushkees/OneDnd_Core.index" />
 	</files>
 </index>
