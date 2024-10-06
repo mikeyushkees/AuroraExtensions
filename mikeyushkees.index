@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<index>
+	<info>
+		<name>M-Juskys Core Extensions</name>
+		<description>Additions of OneDnd content into Aurora Builder</description>
+		<author>Mykolas Juskys</author>
+		<update version="0.0.1">
+			<file name="mikeyushkees.index" url="https://raw.githubusercontent.com/mikeyushkees/AuroraExtensions/master/mikeyushkees.index" />
+		</update>
+	</info>
+	<files>
+		<file name="Tiefling_OneDnd.xml" url="https://raw.githubusercontent.com/mikeyushkees/AuroraExtensions/master/mikeyushkees/file1.xml" />
+	</files>
+</index>

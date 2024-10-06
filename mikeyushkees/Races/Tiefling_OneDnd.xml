@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Tiefling (OneDnd)</name>
+		<update version="0.0.1">
+			<file name="Tiefling_OneDnd.xml" url="https://raw.githubusercontent.com/mikeyushkess/AuroraExtensions/master/mikeyushkees/Races/Tiefling_OneDnd.xml" />
+		</update>
+	</info>
+
+	<element name="Tiefling (OneDnd)" type="Race" source="AuroraExtensions" id="ID_RACE_TIEFLING_PHB24">
+		<description>
+			<p class="flavor">Tieflings are either born in the Lower Planes or have fiendish ancestors who originated there. A tiefling (pronounced TEE-fling) is linked by blood to a devil, a demon, or some other Fiend. This connection to the Lower Planes is the tiefling's fiendish legacy, which comes with the promise of power yet has no effect on the tiefling's moral outlook.</p>
+			<p class="indent">A tiefling chooses whether to embrace or lament their fiendish legacy. The three legacies are described below.</p>
+			<h4>ABYSSAL</h4>
+			<p>The entropy of the Abyss, the chaos of Pandemonium, and the despair of Carceri call to tieflings who have the abyssal legacy. Horns, fur, tusks, and peculiar scents are common physical features of such tieflings, most of whom have the blood of demons coursing through their veins.</p>
+			<h4>CHTHONIC</h4>
+			<p>Tieflings who have the chthonic legacy feel not only the tug of Carceri but also the greed of Gehenna and the gloom of Hades. Some of these tieflings look cadaverous. Others possess the unearthly beauty of a succubus, or they have physical features in common with a night hag, a yugoloth, or some other Neutral Evil fiendish ancestor.</p>
+			<h4>INFERNAL</h4>
+			<p>The infernal legacy connects tieflings not only to Gehenna but also the Nine Hells and the raging battlefields of Acheron. Horns, spines, tails, golden eyes, and a faint odor of sulfur or smoke are common physical features of such tieflings, most of whom trace their ancestry to devils.</p>
+			<h4>TIEFLING TRAITS</h4>
+			<p>Tieflings share certain racial traits as a result of their infernal descent.</p>
+			<p class="indent"><strong><em>Creature Type.</em></strong>Humanoid</p>
+			<p class="indent"><strong><em>Size.</em></strong> Medium (about 4-7 feet tall) or Small (about 3-4 feet tall), chosen when you select this species.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your base walking speed is 30 feet.</p>
+			<p class="indent"><strong><em>Darkvision.</em></strong> Thanks to your infernal heritage, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.</p>
+			<p class="indent"><strong><em>Fiendish Legacy.</em></strong> You are the recipient of a legacy that grants you supernatural abilities. Choose a legacy from the Fiendish Legacies table. You gain the level 1 benefit of the chosen legacy.</p>
+			<p class="indent">When you reach character levels 3 and 5, you learn a higher-level spell, as shown on the table. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the legacy).</p>
+			<h4>FIENDISH LEGACIES</h4>
+			<p class="indent"><strong><em>ABYSSAL.</em></strong><strong><em> Level 1. You have Resistance to Poison damage. You also know the Poison Spray cantrip.</em></strong></p><strong><em> Level 3. Ray of Sickness</em></strong><strong><em> Level 5. Hold</em></strong>
+			<p class="indent"><strong><em>CHTHONIC.</em></strong><strong><em> Level 1. You have Resistance to Necrotic damage. You also know the Chill Touch cantrip.</em></strong></p><strong><em> Level 3. False Life</em></strong><strong><em> Level 5. Ray of Enfeeblement</em></strong>
+			<p class="indent"><strong><em>INFERNAL.</em></strong><strong><em> Level 1. You have Resistance to Fire damage. You also know the Fire Bolt cantrip.</em></strong></p><strong><em> Level 3. Hellish Rebuke</em></strong><strong><em> Level 5. Darkness</em></strong>
+		</description>
+		<sheet display="false" />
+		<setters>
+			<set name="names" type="male">Akmenos, Amnon, Barakas, Damakos, Ekemon, Iados, Kairon, Leucis, Melech, Mordai, Morthos, Pelaios, Skamos, Therai</set>
+			<set name="names" type="female">Akta, Anakis, Bryseis, Criella, Damaia, Ea, Kallista, Lerissa, Makaria, Nemeia, Orianna, Phelaia, Rieta</set>
+			<set name="names" type="virtue">Art, Carrion, Chant, Creed, Despair, Excellence, Fear, Glory, Hope, Ideal, Music, Nowhere, Open, Poetry, Quest, Random, Reverence, Sorrow, Temerity, Torment, Weary</set>
+			<set name="names-format">{{name}} “{{virtue}}”</set>
+			<set name="height" modifier="2d8">4'9"</set>
+			<set name="weight" modifier="2d4">110 lb.</set>
+		</setters>
+		<rules>
+			<stat name="intelligence" value="1" requirements="!ID_INTERNAL_GRANTS_TIEFLING_SUBRACE" />
+			<stat name="charisma" value="2" requirements="!ID_INTERNAL_GRANTS_TIEFLING_SUBRACE"/>
+			<stat name="innate speed" value="30" bonus="base"/>
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+			<grant type="Vision" id="ID_VISION_DARKVISION" />
+			<grant type="Language" id="ID_LANGUAGE_COMMON" />
+			<grant type="Language" id="ID_LANGUAGE_INFERNAL" />
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_HELLISH_RESISTANCE" />
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_INFERNAL_LEGACY" requirements="!ID_INTERNAL_GRANTS_TIEFLING_SUBRACE"/>
+			<select type="Sub Race" name="Tiefling Subrace" supports="Tiefling" optional="true" />
+		</rules>
+	</element>
+	<element name="Hellish Resistance" type="Racial Trait" source="Player’s Handbook" id="ID_RACIAL_TRAIT_HELLISH_RESISTANCE">
+		<description>
+			<p>You have resistance to fire damage.</p>
+		</description>
+		<sheet>
+			<description>You have resistance to fire damage.</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE" />
+		</rules>
+	</element>
+	<element name="Infernal Legacy" type="Racial Trait" source="Player’s Handbook" id="ID_RACIAL_TRAIT_INFERNAL_LEGACY">
+		<description>
+			<p>You know the thaumaturgy cantrip. When you reach 3rd level, you can cast the hellish rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the darkness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.</p>
+		</description>
+		<sheet>
+			<description>You know the thaumaturgy cantrip. (Charisma)</description>
+			<description level="3">You know the thaumaturgy cantrip. You can cast the hellish rebuke spell as a 2nd-level spell (1/long rest). (Charisma)</description>
+			<description level="5">You know the thaumaturgy cantrip. You can cast the hellish rebuke spell as a 2nd-level spell and the darkness spell (1/long rest). (Charisma)</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_THAUMATURGY" />
+			<grant type="Spell" id="ID_PHB_SPELL_HELLISH_REBUKE" level="3"/>
+			<grant type="Spell" id="ID_PHB_SPELL_DARKNESS" level="5"/>
+		</rules>
+	</element>
+	<!-- an element that you should grant in a subrace so that you can override stats/infernal legacy -->
+	<element name="Tiefling Subrace" type="Grants" source="Internal" id="ID_INTERNAL_GRANTS_TIEFLING_SUBRACE" />
+</elements>
