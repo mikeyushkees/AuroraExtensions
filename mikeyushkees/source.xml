@@ -2,7 +2,7 @@
 <elements>
 	<info>
 		<update version="0.0.1">
-			<file name="source.xml" url="https://raw.githubusercontent.com/mikeyushkess/AuroraExtensions/master/mikeyushkees/source.xml" />
+			<file name="source.xml" url="https://raw.githubusercontent.com/mikeyushkees/AuroraExtensions/master/mikeyushkees/source.xml" />
 		</update>
 	</info>
 	<element name="OneDnd Player’s Handbook" type="Source" source="AuroraExtensions" id="ID_WOTC_SOURCE_PLAYERS_HANDBOOK_M-JUSKYS">
