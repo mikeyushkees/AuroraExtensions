@@ -2,7 +2,7 @@
 <index>
 	<info>
 		<name>M-Juskys Core Extensions</name>
-		<description>Additions of OneDnd content into Aurora Builder</description>
+		<description>Additions of OneDnd content into Aurora Builder, I hope</description>
 		<author>Mykolas Juskys</author>
 		<update version="0.0.1">
 			<file name="mikeyushkees.index" url="https://raw.githubusercontent.com/mikeyushkees/AuroraExtensions/master/mikeyushkees.index" />
